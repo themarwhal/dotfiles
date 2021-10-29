@@ -39,3 +39,17 @@ _load_settings "$HOME/.zsh/configs"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# git_update updates master with upstream changes, and optionally creates a feature branch.
+function git_update() {
+    git checkout master && git pull upstream master && git push origin master
+
+    local br=${1}
+    if [[ $br != "" ]]; then
+        local br_base=${br}_base
+        git branch ${br_base}
+        git checkout -b ${br}
+    fi
+}
+
+alias magma='cd $MAGMA_ROOT'
