@@ -4,6 +4,7 @@ PWD=`pwd`
 
 set -x
 
+ln -sf ${PWD}/aliases ~/.aliases
 ln -sf ${PWD}/gitconfig ~/.gitconfig
 ln -sf ${PWD}/vim ~/.vim
 ln -sf ${PWD}/vimrc ~/.vimrc
