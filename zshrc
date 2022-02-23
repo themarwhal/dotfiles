@@ -53,3 +53,5 @@ function git_update() {
 }
 
 alias magma='cd $MAGMA_ROOT'
+
+[ -s "/home/codespace/.scm_breeze/scm_breeze.sh" ] && source "/home/codespace/.scm_breeze/scm_breeze.sh"
